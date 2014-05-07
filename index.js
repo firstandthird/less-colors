@@ -1,8 +1,14 @@
 var less = require('less');
-var parser = new(less.Parser);
 var fs = require('fs');
 
-module.exports = function(lessSource, callback) {
+module.exports = function(lessSource, options, callback) {
+
+  if (typeof callback === 'undefined') {
+    callback = options;
+    options = {};
+  }
+
+  var parser = new less.Parser(options);
 
   parser.parse(lessSource, function (err, tree) {
     if (err) {
