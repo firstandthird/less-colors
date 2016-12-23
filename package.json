@@ -8,7 +8,7 @@
     "url": "https://github.com/firstandthird/less-colors.git"
   },
   "dependencies": {
-    "less": "^1.7.0"
+    "less": "^2.7.1"
   },
   "devDependencies": {},
   "main": "index.js"
